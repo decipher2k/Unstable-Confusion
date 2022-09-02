@@ -6,10 +6,11 @@ The download package contains everything required - no installations besides dot
 Unzip using 7zip and you're ready to go!<br><br>
 
 <b>Download:</b><br>
+(3 parts)<br>
 
-https://mega.nz/file/RWFDSarR#xaCjMJksuTZ1maUtO__1F3wFlWwx4dbF5VkS4Bj5_xY <br>
-https://mega.nz/file/8SFExBIK#kTPseweFLePH3I-Cnmfux9ZXvweMWFDjh3JeciYg1Sw <br>
-https://mega.nz/file/BPlzVIrT#b5mYfsy3rRQFymv3O2szEFeZF3IogZPkIoivC_esBJw <br>
+https://mega.nz/file/RWFDSarR#xaCjMJksuTZ1maUtO__1F3wFlWwx4dbF5VkS4Bj5_xY (4GB)<br>
+https://mega.nz/file/8SFExBIK#kTPseweFLePH3I-Cnmfux9ZXvweMWFDjh3JeciYg1Sw (4GB)<br>
+https://mega.nz/file/BPlzVIrT#b5mYfsy3rRQFymv3O2szEFeZF3IogZPkIoivC_esBJw (2.5GB)<br>
  <br>
 ![image](https://user-images.githubusercontent.com/18600621/188054496-4c2d927b-dfb5-4d1f-99ed-b39719a23958.png)
 
