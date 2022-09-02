@@ -1,0 +1,23 @@
+﻿<Window x:Class="Unstable_Confusion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:Unstable_Confusion"
+        mc:Ignorable="d"
+        Title="Unstable Confusion" Height="556" Width="474" ResizeMode="NoResize" Icon="/icon.png">
+    <Grid>
+        <Label Content="Enter text2image prompt:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPrompt" HorizontalAlignment="Center" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="423"/>
+        <Button x:Name="bnStart" Content="Start" HorizontalAlignment="Center" Margin="0,74,0,0" VerticalAlignment="Top" Width="423" Click="Button_Click"/>
+        <Image x:Name="imgResult" HorizontalAlignment="Left" Height="329" Margin="57,123,0,0" VerticalAlignment="Top" Width="342"/>
+        <Button x:Name="bnSave" Content="Save" HorizontalAlignment="Center" Height="33" Margin="0,466,0,0" VerticalAlignment="Top" Width="422" Click="Button_Click_1" IsEnabled="False"/>
+        <Image gif:ImageBehavior.AnimatedSource="loading-loading-symbol.gif" Visibility="Hidden" x:Name="wait" HorizontalAlignment="Left" Height="100" Margin="179,213,0,0" VerticalAlignment="Top" Width="100" />
+        <Button x:Name="bnStop" IsEnabled="False" Content="Stop" HorizontalAlignment="Center" Margin="0,99,0,0" VerticalAlignment="Top" Width="423" Click="ButtonStop_Click"/>
+
+
+
+
+    </Grid>
+</Window>
