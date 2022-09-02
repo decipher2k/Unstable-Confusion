@@ -1,5 +1,5 @@
 # Unstable-Confusion
-A simple GUI for stable diffusion with 8GB video RAM required.<br>
+A simple GUI for stable diffusion. 8GB GPU RAM are required.<br>
 Generating an image takes about 10 minutes on an RTX3050 with 8GB VRAM.<br><br>
 <br>
 The download package contains everything required - no installations besides dotNet are necessary.<br>
