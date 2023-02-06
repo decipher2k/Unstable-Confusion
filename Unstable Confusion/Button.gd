@@ -11,15 +11,17 @@ func _ready():
 	pass # Replace with function body.
 
 func go(txt:String):
-	var bn:Button=get_tree().root.find_node("Button",true,false)
-	bn.disabled=true
-	var lbl:Label=get_tree().root.find_node("lblOutput",true,false)
-	lbl.text="Generating..."
 	
 	var sd=get_tree().root.find_node("SD",true,false)
 	sd.b=txt
 	sd.running=true
+	sd.finished=false
+	var lbl:Label=get_tree().root.find_node("lblOutput",true,false)
 	while sd.finished==false:
+		if(sd.modelloading==true):
+			lbl.text="Loading model..."
+		else:
+			lbl.text="Generating image..."
 		pass
 	
 	var image = Image.new()
@@ -29,7 +31,9 @@ func go(txt:String):
 	t.create_from_image(image)
 	var textureRect:TextureRect=get_tree().root.find_node("TextureRect",true,false)
 	textureRect.texture = t	
+	
 	lbl.text="Output:"	
+	var bn:Button=get_tree().root.find_node("Button",true,false)
 	bn.disabled=false
 	
 	var bnSave:Button=get_tree().root.find_node("bnSave",true,false)
@@ -54,6 +58,11 @@ func _on_Button_pressed():
 	if(txt==""):
 		alert("Please enter text.","Error")
 	else:		
+		var bn:Button=get_tree().root.find_node("Button",true,false)
+		bn.disabled=true
+		var lbl:Label=get_tree().root.find_node("lblOutput",true,false)
+		lbl.text="Generating..."
+
 		thread = Thread.new()
 		thread.start(self,"go",txt)
 	pass # Replace with function body.
