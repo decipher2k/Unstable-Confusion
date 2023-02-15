@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SD.py" type="Script" id=1]
+[ext_resource path="res://bnLoadImage.gd" type="Script" id=2]
 [ext_resource path="res://Button.gd" type="Script" id=3]
 [ext_resource path="res://bnSave.gd" type="Script" id=4]
 [ext_resource path="res://FileDialog.gd" type="Script" id=5]
 [ext_resource path="res://bnExit.gd" type="Script" id=6]
+[ext_resource path="res://FileDialogLoadImage.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,10 +27,10 @@ margin_right = 1885.0
 margin_bottom = 65.0
 
 [node name="Button" type="Button" parent="."]
-margin_left = 41.0
-margin_top = 74.0
-margin_right = 125.0
-margin_bottom = 94.0
+margin_left = 43.0
+margin_top = 94.0
+margin_right = 127.0
+margin_bottom = 114.0
 text = "Generate"
 script = ExtResource( 3 )
 
@@ -46,10 +48,10 @@ margin_right = 1356.0
 margin_bottom = 999.0
 
 [node name="bnSave" type="Button" parent="."]
-margin_left = 41.0
-margin_top = 101.0
-margin_right = 126.0
-margin_bottom = 121.0
+margin_left = 42.0
+margin_top = 120.0
+margin_right = 127.0
+margin_bottom = 140.0
 disabled = true
 text = "Save..."
 script = ExtResource( 4 )
@@ -75,7 +77,26 @@ margin_bottom = 26.0
 text = "X"
 script = ExtResource( 6 )
 
+[node name="bnLoadImage" type="Button" parent="."]
+margin_left = 43.0
+margin_top = 68.0
+margin_right = 129.0
+margin_bottom = 88.0
+text = "Load Image"
+script = ExtResource( 2 )
+
+[node name="FileDialogLoadImage" type="FileDialog" parent="."]
+margin_right = 600.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 600, 300 )
+window_title = "Datei öffnen"
+mode = 0
+access = 2
+script = ExtResource( 7 )
+
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="bnSave" to="bnSave" method="_on_bnSave_pressed"]
 [connection signal="file_selected" from="FileDialog" to="FileDialog" method="_on_FileDialog_file_selected"]
 [connection signal="pressed" from="bnExit" to="bnExit" method="_on_bnExit_pressed"]
+[connection signal="pressed" from="bnLoadImage" to="bnLoadImage" method="_on_bnLoadImage_pressed"]
+[connection signal="file_selected" from="FileDialogLoadImage" to="FileDialogLoadImage" method="_on_FileDialogLoadImage_file_selected"]

@@ -13,9 +13,15 @@ func _ready():
 func go(txt:String):
 	
 	var sd=get_tree().root.find_node("SD",true,false)
+	if get_tree().root.find_node("FileDialogLoadImage",true,false).file!="":
+		sd.image=get_tree().root.find_node("FileDialogLoadImage",true,false).file
 	sd.b=txt
+	
+	
 	sd.running=true
 	sd.finished=false
+	
+	
 	var lbl:Label=get_tree().root.find_node("lblOutput",true,false)
 	while sd.finished==false:
 		if(sd.modelloading==true):
